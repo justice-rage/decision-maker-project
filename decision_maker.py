@@ -6,14 +6,18 @@ import random
 # List of options
 option_list = []
 
-# Number of options
-option_number = int(input("Enter number of options: "))
-print()
+while True:
+    try:
+        # Number of options
+        option_number = int(input("Enter number of options: "))
+        print()
+        break
+    except ValueError:
+        print("Error. Enter option number: ")
 
 # Iterates through range
-for i in range(0, option_number):
+for i in range(option_number):
     option = str(input(f"Enter choice {i + 1}: "))
-
     option_list.append(option) # Adds submitted options to list
 
 decision = random.choice(option_list) # Randomly returns one option
