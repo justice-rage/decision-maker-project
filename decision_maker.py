@@ -12,7 +12,7 @@ while True:
         option_number = int(input("Enter number of options: "))
         print()
         break
-    except ValueError:
+    except ValueError: # Error management ensuring program doesn't crash
         print("Error. Enter option number: ")
 
 # Iterates through range
